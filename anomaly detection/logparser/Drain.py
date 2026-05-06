@@ -300,7 +300,7 @@ class LogParser:
         """
         log_messages = []
         linecount = 0
-        with open(log_file, 'r') as fin:
+        with open(log_file, 'r', encoding='utf-8', errors='ignore') as fin:
             for line in fin.readlines():
                 try:
                     match = regex.search(line.strip())
